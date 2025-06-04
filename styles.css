@@ -1,0 +1,499 @@
+/* 全局样式 */ 
+:root { 
+  --primary-color: #4361ee; 
+  --secondary-color: #3f37c9; 
+  --accent-color: #4895ef; 
+  --light-color: #f8f9fa; 
+  --dark-color: #212529; 
+  --border-radius: 4px; /* 减小圆角半径 */ 
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 更柔和的阴影 */ 
+  --transition: all 0.2s ease; 
+} 
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-size: 0.85rem; 
+  line-height: 1.4; 
+  color: #0F172A; 
+  background-color: black; /* 修改背景色为黑色 */
+  background-image: url('D:/跟他丫的爆了/黑背景.png'); /* 设置背景图片 */
+  background-position: top; /* 背景图片置顶 */
+  background-size: cover; /* 让背景图片覆盖整个页面 */
+  background-repeat: no-repeat; /* 背景图片不重复 */
+  background-attachment: fixed; /* 背景图片固定，不随页面滚动 */
+  margin: 0; 
+  padding: 0; 
+} 
+
+h2 { 
+  color: #0F172A; /* 修改标题颜色 */
+  margin: 0 0 0.6rem 0; 
+  font-size: 1.1rem; 
+  border-bottom: 1px solid var(--accent-color); 
+  padding-bottom: 0.2rem; 
+} 
+
+/* 容器布局 - 更紧凑 */ 
+.container { 
+  max-width: 800px; /* 进一步减小宽度 */ 
+  margin: 0 auto; 
+  padding: 1rem; /* 减小内边距 */ 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; /* 减小间距 */ 
+} 
+
+/* 行布局 - 更紧凑 */ 
+.first-row, .second-row { 
+  display: flex; 
+  gap: 1rem; /* 减小间距 */ 
+  width: 100%; 
+} 
+
+/* 左右部分样式 - 更紧凑 */ 
+.left-section { 
+  background: white; 
+  border-radius: var(--border-radius); 
+  box-shadow: var(--box-shadow); 
+  padding: 0.8rem; /* 减小内边距 */ 
+  flex: 4; /* 修改为 4，缩小宽度 */
+} 
+
+.right-section { 
+  background: white; 
+  border-radius: var(--border-radius); 
+  box-shadow: var(--box-shadow); 
+  padding: 0.8rem; /* 减小内边距 */ 
+  flex: 6; /* 修改为 6，扩大宽度 */
+} 
+
+/* 标题样式 - 更紧凑 */ 
+h2 { 
+  color: #1E293B; 
+  margin: 0 0 0.6rem 0; 
+  font-size: 1.1rem; 
+  border-bottom: 1px solid #64748B; /* 修改下划线颜色 */
+  padding-bottom: 0.2rem; 
+} 
+
+/* 按钮 - 更紧凑，适配文字大小并右对齐 */
+button { 
+  background-color: #1E293B; /* 修改按钮背景颜色 */
+  color: white; 
+  border: none; 
+  padding: 0.3rem 0.6rem; 
+  border-radius: var(--border-radius); 
+  font-size: 0.8rem; 
+  cursor: pointer; 
+  transition: var(--transition); 
+  width: auto; 
+  margin-top: 0.6rem; 
+  display: block; 
+  margin-left: auto; 
+} 
+
+button:hover { 
+  background-color: #04ABF2; /* 可根据需求调整悬停颜色 */
+  transform: translateY(-2px); 
+} 
+
+/* 修改大标题颜色为白色 */
+h1 {
+  background-image: url('D:/跟他丫的爆了/背景.png');
+  background-size: 100% auto; 
+  background-position: center; 
+  color: white; /* 修改为白色 */
+  text-align: center; 
+  padding: 2rem; 
+  margin: 0 auto; 
+  max-width: 800px; 
+  box-sizing: border-box; 
+}
+
+/* 修改其他小标题下划线颜色 */
+h2 { 
+  color: #1E293B; 
+  margin: 0 0 0.6rem 0; 
+  font-size: 1.1rem; 
+  border-bottom: 1px solid #00B6EB; /* 修改下划线颜色 */
+  padding-bottom: 0.2rem; 
+}
+
+/* 添加图片样式 */
+#rhodeIslandImage {
+  width: 100%; /* 图片宽度与模块宽度吻合 */
+  height: auto; /* 保持图片比例 */
+  display: block; /* 确保图片作为块级元素显示 */
+  margin-top: 0.5rem; /* 与上方元素保持间距 */
+}
+
+/* 输入框和文本区域 - 更紧凑 */ 
+input[type="file"], 
+.requirement-box textarea { 
+  width: 100%; /* 使用全宽 */ 
+  padding: 0.5rem; /* 减小内边距 */ 
+  border: 1px solid #ddd; 
+  border-radius: var(--border-radius); 
+  margin-bottom: 0.6rem; /* 减小下边距 */ 
+  font-size: 0.8rem; /* 减小字号 */ 
+  box-sizing: border-box; /* 包含内边距在宽度内 */ 
+} 
+
+.requirement-box textarea { 
+  min-height: 70px; /* 减小最小高度 */ 
+} 
+
+/* 按钮 - 更紧凑，适配文字大小并右对齐 */
+button { 
+  background-color: black; /* 修改默认背景色为黑色 */
+  color: white; /* 文字颜色为白色 */
+  border: none; 
+  padding: 0.3rem 0.6rem; 
+  border-radius: var(--border-radius); 
+  font-size: 0.8rem; 
+  cursor: pointer; 
+  transition: var(--transition); 
+  width: auto; 
+  margin-top: 0.6rem; 
+  display: block; 
+  margin-left: auto; 
+} 
+
+button:disabled { 
+  background-color: #cccccc; 
+  color: #0F172A; /* 修改禁用按钮文字颜色 */
+  cursor: not-allowed; 
+  transform: none; 
+} 
+
+/* 其他元素 - 更紧凑 */ 
+#fileInfo, 
+progress, 
+#uploadSuccessMessage, 
+#improvementSuggestions { 
+  font-size: 0.8rem; /* 统一减小字号 */ 
+  padding: 0.5rem; /* 减小内边距 */ 
+  margin: 0.5rem 0; /* 减小外边距 */ 
+} 
+
+progress { 
+  height: 8px; 
+  border-radius: 4px; 
+} 
+
+progress::-webkit-progress-bar { 
+  background-color: #f0f0f0; 
+  border-radius: 4px; 
+} 
+
+progress::-webkit-progress-value { 
+  background-color: #4cc9f0; 
+  border-radius: 4px; 
+} 
+
+#uploadSuccessMessage {
+    margin-top: 0.5rem; /* 确保弹窗和按钮之间有一定间距 */
+    background-color: #4CAF50; 
+    color: white; 
+    text-align: center; 
+    display: none; 
+} 
+
+#uploadSuccessMessage.show {
+  background-color: #00B6EB; /* 设置弹窗背景颜色为 #00B6EB */
+  color: white; /* 可以根据需要设置文字颜色，这里设为白色以提高对比度 */
+  padding: 10px; /* 添加内边距，让弹窗内容更美观 */
+  border-radius: 4px; /* 添加圆角 */
+  /* 可以根据需要添加其他样式，如边框、阴影等 */
+  display: block; 
+} 
+
+/* 改进建议区域 - 更紧凑 */ 
+#improvementSuggestions { 
+  background-color: white; 
+  border-radius: var(--border-radius); 
+  box-shadow: var(--box-shadow); 
+  min-height: 120px; /* 减小最小高度 */ 
+  max-height: 350px; /* 减小最大高度 */ 
+  overflow-y: auto; 
+  border: 1px solid #eee; 
+} 
+
+/* 加载和错误状态 - 更紧凑 */ 
+.loading, .error { 
+  color: #0F172A; /* 修改加载和错误状态文字颜色 */
+  text-align: center; 
+  padding: 1rem; 
+  font-style: italic; 
+  font-size: 0.8rem; 
+} 
+
+.error { 
+  color: #e63946; 
+  background-color: #ffebee; 
+} 
+
+/* 响应式设计 - 调整断点和间距 */ 
+@media (max-width: 768px) { 
+  .container { 
+    padding: 0.6rem; 
+  } 
+  
+  .first-row, .second-row { 
+    gap: 0.6rem; 
+  } 
+  
+  .left-section, .right-section { 
+    padding: 0.6rem; 
+  } 
+  
+  textarea { 
+    min-height: 60px; 
+  } 
+} 
+
+/* 紧凑布局调整 */ 
+.requirement-box { 
+  margin-bottom: 0.8rem; /* 减小下边距 */ 
+} 
+
+textarea:focus { 
+  outline: none; 
+  border-color: var(--accent-color); 
+  box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2); 
+} 
+
+/* Markdown内容样式 */ 
+#improvementSuggestions h1, 
+#improvementSuggestions h2, 
+#improvementSuggestions h3 { 
+  color: #0F172A; /* 修改Markdown标题颜色 */
+  margin-top: 1.5rem; 
+} 
+
+#improvementSuggestions ul, 
+#improvementSuggestions ol { 
+  padding-left: 1.5rem; 
+} 
+
+#improvementSuggestions li { 
+  margin-bottom: 0.5rem; 
+} 
+
+#improvementSuggestions strong { 
+  color: #0F172A; /* 修改Markdown加粗文字颜色 */
+}
+
+/* 按钮位置微调 */ 
+#uploadButton { 
+  bottom: -25px; /* 上移按钮 */ 
+} 
+
+.right-section button { 
+  margin-top: 0.5rem; 
+}
+
+/* 去掉 Step.2 提出改进目标 下方的下划线 */
+.right-section > h2:first-child {
+  border-bottom: none; 
+  padding-bottom: 0;
+}
+
+/* 缩小 简历递交目的（求职、申报等） 和 你的改进期望 的字号 */
+.requirement-box h2 {
+  font-size: 0.9rem; /* 假设原字号为 1.1rem，缩小两个字号为 0.9rem */
+}
+
+#fileFormatHint {
+    font-size: 0.7rem; /* 假设原字号为 0.8rem，小一个字号为 0.7rem */
+    color: #999999; /* 灰色 */
+    margin-bottom: 0.6rem; /* 与下方元素保持间距 */
+}
+
+#hoverImage {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 10%; /* 缩小为原来的十分之一 */
+    height: auto; /* 保持图片比例 */
+    cursor: pointer; /* 添加这一行，让鼠标悬停时变为可点击的手型 */
+}
+
+#hoverText {
+    position: fixed;
+    right: 5px;
+    bottom: calc(20% + 80px); /* 位于图片上方，假设图片宽度为 10%，留出 10px 间距 */
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    max-width: 10%; /* 与图片宽度一致 */
+    text-align: center;
+}
+
+/* 弹窗样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    /* 添加以下样式让图片垂直居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img[src="D:/跟他丫的爆了/热水壶.png"] {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.resume-tips {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.3rem; /* 缩小与下方元素的间距，可根据实际情况调整 */
+}
+
+h1 + p {
+    text-align: center;
+    margin-top: 0; /* 去除上方间距 */
+}
+
+/* 按钮位置微调 */ 
+#uploadButton { 
+  bottom: -25px; /* 上移按钮 */ 
+} 
+
+.right-section button { 
+  margin-top: 0.5rem; 
+}
+
+/* 去掉 Step.2 提出改进目标 下方的下划线 */
+.right-section > h2:first-child {
+  border-bottom: none; 
+  padding-bottom: 0;
+}
+
+/* 缩小 简历递交目的（求职、申报等） 和 你的改进期望 的字号 */
+.requirement-box h2 {
+  font-size: 0.9rem; /* 假设原字号为 1.1rem，缩小两个字号为 0.9rem */
+}
+
+#fileFormatHint {
+    font-size: 0.7rem; /* 假设原字号为 0.8rem，小一个字号为 0.7rem */
+    color: #999999; /* 灰色 */
+    margin-bottom: 0.6rem; /* 与下方元素保持间距 */
+}
+
+#hoverImage {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 10%; /* 缩小为原来的十分之一 */
+    height: auto; /* 保持图片比例 */
+    cursor: pointer; /* 添加这一行，让鼠标悬停时变为可点击的手型 */
+}
+
+#hoverText {
+    position: fixed;
+    right: 5px;
+    bottom: calc(20% + 80px); /* 位于图片上方，假设图片宽度为 10%，留出 10px 间距 */
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    max-width: 10%; /* 与图片宽度一致 */
+    text-align: center;
+}
+
+/* 弹窗样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    /* 添加以下样式让图片垂直居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img[src="D:/跟他丫的爆了/热水壶.png"] {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.resume-tips {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 0.5rem;
+}

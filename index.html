@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历改进助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cos-js-sdk-v5/dist/cos-js-sdk-v5.min.js"></script>
+</head>
+<body>
+    <h1>简历改进助手</h1>
+    <p style="font-size: 0.8rem; color: white;">为你的简历内容提出改进建议，画上点睛之笔！</p>
+    <div class="container">
+        <!-- 第一行 -->
+        <div class="first-row">
+            <div class="left-section">
+                <h2>Step.1 上传你的文件</h2>
+                <input type="file" id="fileInput" accept=".doc,.docx,.pdf">
+                <div id="fileFormatHint">支持doc、docx、pdf、txt形式，每个最大15M</div>
+                <div id="fileInfo"></div>
+                <progress id="uploadProgress" value="0" max="100"></progress>
+                <button id="uploadButton">确定上传文件</button>
+                <!-- 将成功弹窗移动到按钮下方 -->
+                <div id="uploadSuccessMessage" class="hidden"></div>
+                <!-- 添加图片 -->
+                <img id="rhodeIslandImage" src="D:/跟他丫的爆了/罗德岛.png" alt="罗德岛图片">
+            </div>
+            <div class="right-section">
+                <h2>Step.2 提出改进目标</h2>
+                <div class="requirement-box">
+                    <h2>简历递交目的（求职、申报等）</h2>
+                    <!-- 增加占位提示 -->
+                    <textarea id="requirement1" placeholder="例：申请人力资源岗位"></textarea> 
+                </div>
+                <div class="requirement-box">
+                    <h2>你的改进期望</h2>
+                    <!-- 增加占位提示 -->
+                    <textarea id="requirement2" placeholder="例：让我的校园经历更丰富一点"></textarea> 
+                </div>
+                <button id="generateButton">生成改进建议</button>
+            </div>
+        </div>
+        <!-- 第二行 -->
+        <div class="second-row">
+            <div class="right-section improvement-suggestion-display">
+                <h2>改进建议</h2>
+                <div id="improvementSuggestions"></div>
+                <!-- 添加提示信息框 -->
+                <div id="resumeTips" class="resume-tips"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 添加图片元素 -->
+    <!-- 添加文字框 -->
+    <div id="hoverText">工程部的小测试，有问题可以反馈Closuretest@163.com</div>
+    <!-- 修改图片元素 -->
+    <img 
+        id="hoverImage" 
+        src="D:/跟他丫的爆了/初始.png" 
+        alt="初始图片"
+        onmouseover="changeTextAndImage(true)"
+        onmouseout="changeTextAndImage(false)"
+        onclick="showPaymentImage()"
+    >
+    <!-- 添加弹窗 -->
+    <div id="paymentModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="paymentImg">
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function changeTextAndImage(isHover) {
+            const hoverText = document.getElementById('hoverText');
+            const hoverImage = document.getElementById('hoverImage');
+            if (isHover) {
+                hoverText.textContent = '要不要给项目一点支持，今日特价哦！';
+                hoverImage.src = 'D:/跟他丫的爆了/悬停.png';
+            } else {
+                hoverText.textContent = '工程部新人的小测试，有问题可以反馈Closuretest@163.com';
+                hoverImage.src = 'D:/跟他丫的爆了/初始.png';
+            }
+        }
+
+        function showPaymentImage() {
+            const modal = document.getElementById('paymentModal');
+            const img = document.getElementById('paymentImg');
+            img.src = 'D:/跟他丫的爆了/支付.png';
+            modal.style.display = "block";
+        }
+
+        // 获取关闭按钮
+        const span = document.getElementsByClassName("close")[0];
+        // 当用户点击关闭按钮时，关闭弹窗
+        span.onclick = function() { 
+            const modal = document.getElementById('paymentModal');
+            modal.style.display = "none";
+        }
+
+        // 当用户点击弹窗外部区域时，关闭弹窗
+        window.onclick = function(event) {
+            const modal = document.getElementById('paymentModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
