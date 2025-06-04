@@ -24,7 +24,7 @@
                 <!-- 将成功弹窗移动到按钮下方 -->
                 <div id="uploadSuccessMessage" class="hidden"></div>
                 <!-- 添加图片 -->
-                <img id="rhodeIslandImage" src="D:/跟他丫的爆了/罗德岛.png" alt="罗德岛图片">
+                <img id="rhodeIslandImage" src="罗德岛.png" alt="罗德岛图片">
             </div>
             <div class="right-section">
                 <h2>Step.2 提出改进目标</h2>
@@ -57,7 +57,7 @@
     <!-- 修改图片元素 -->
     <img 
         id="hoverImage" 
-        src="D:/跟他丫的爆了/初始.png" 
+        src="初始.png" 
         alt="初始图片"
         onmouseover="changeTextAndImage(true)"
         onmouseout="changeTextAndImage(false)"
@@ -75,17 +75,17 @@
             const hoverImage = document.getElementById('hoverImage');
             if (isHover) {
                 hoverText.textContent = '要不要给项目一点支持，今日特价哦！';
-                hoverImage.src = 'D:/跟他丫的爆了/悬停.png';
+                hoverImage.src = '悬停.png';
             } else {
                 hoverText.textContent = '工程部新人的小测试，有问题可以反馈Closuretest@163.com';
-                hoverImage.src = 'D:/跟他丫的爆了/初始.png';
+                hoverImage.src = '初始.png';
             }
         }
 
         function showPaymentImage() {
             const modal = document.getElementById('paymentModal');
             const img = document.getElementById('paymentImg');
-            img.src = 'D:/跟他丫的爆了/支付.png';
+            img.src = '支付.png';
             modal.style.display = "block";
         }
 
