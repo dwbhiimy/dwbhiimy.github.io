@@ -218,7 +218,7 @@ document.getElementById('generateButton').addEventListener('click', async functi
                     "additional_messages": [
                         {
                             "role": "user",
-                            "content": `文件 URL: ${tempFileUrl}, 改进建议 1: ${requirement1}, 改进建议 2: ${requirement2}`,
+                            "content": `文件 URL: ${tempFileUrl}, 简历递交目的（求职、申报等）: ${requirement1}, 你的改进期望: ${requirement2}`,
                             "content_type": "text"
                         }
                     ]
