@@ -165,12 +165,12 @@ function checkSuggestions() {
     const improvementSuggestionsDiv = document.getElementById('improvementSuggestions');
     const content = improvementSuggestionsDiv.textContent;
     const triggers = [
-        { text: '以下是银灰先生的评价', src: 'D:\\跟他丫的爆了\\银灰-不融冰-基建-Relax-x0.8.webm' },
-        { text: '以下是凯尔希医生的评价', src: 'D:\\跟他丫的爆了\\凯尔希-默认-基建-Relax-x1.webm' },
-        { text: '以下是赫默医生的评价', src: 'D:\\跟他丫的爆了\\赫默-默认-基建-Relax-x1.webm' },
-        { text: '以下是梓兰小姐的评价', src: 'D:\\跟他丫的爆了\\梓兰-默认-基建-Relax-x1.webm' },
-        { text: '以下是杜宾教官的评价', src: 'D:\\跟他丫的爆了\\杜宾-默认-基建-Relax-x1.webm' },
-        { text: '蜜饼', src: 'D:\\跟他丫的爆了\\刻俄柏-默认-基建-Sleep-x1.webm' }
+        { text: '以下是银灰先生的评价', src: '银灰-不融冰-基建-Relax-x0.8.webm' },
+        { text: '以下是凯尔希医生的评价', src: '凯尔希-默认-基建-Relax-x1.webm' },
+        { text: '以下是赫默医生的评价', src: '赫默-默认-基建-Relax-x1.webm' },
+        { text: '以下是梓兰小姐的评价', src: '梓兰-默认-基建-Relax-x1.webm' },
+        { text: '以下是杜宾教官的评价', src: '杜宾-默认-基建-Relax-x1.webm' },
+        { text: '蜜饼', src: '刻俄柏-默认-基建-Sleep-x1.webm' }
     ];
 
     for (const trigger of triggers) {
@@ -328,10 +328,10 @@ document.body.addEventListener('click', function(event) {
 
     // 定义图片列表和对应的概率
     const images = [
-        { src: 'D:/跟他丫的爆了/热水壶.png', weight: 50 },
-        { src: 'D:/跟他丫的爆了/人事部铜印.png', weight: 20 },
-        { src: 'D:/跟他丫的爆了/人事部密信.png', weight: 20 },
-        { src: 'D:/跟他丫的爆了/博士银印.png', weight: 10 }
+        { src: '热水壶.png', weight: 50 },
+        { src: '人事部铜印.png', weight: 20 },
+        { src: '人事部密信.png', weight: 20 },
+        { src: '博士银印.png', weight: 10 }
     ];
 
     // 根据概率随机选择图片
